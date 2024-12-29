@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" version="25.0.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" version="25.0.3">
   <diagram name="第 1 页" id="gAtkW7bylOQtAJeNs2VR">
     <mxGraphModel dx="1434" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" background="none" math="0" shadow="0">
       <root>
@@ -288,22 +288,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MK47nBRpxyOCvtwYz0mT-1" value="代码流程" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="560" width="200" height="210" as="geometry" />
+          <mxGeometry x="200" y="560" width="200" height="250" as="geometry" />
         </mxCell>
         <mxCell id="vj2Zs9e24-JzKse8db9l-1" value="1.创建一个只有wifi基本功能的热点(不会处理数据包)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="MK47nBRpxyOCvtwYz0mT-1" vertex="1">
-          <mxGeometry y="30" width="200" height="30" as="geometry" />
+          <mxGeometry y="30" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MK47nBRpxyOCvtwYz0mT-2" value="2.和中间服务器发起TCP连接" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="MK47nBRpxyOCvtwYz0mT-1" vertex="1">
-          <mxGeometry y="60" width="200" height="30" as="geometry" />
+          <mxGeometry y="70" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MK47nBRpxyOCvtwYz0mT-3" value="3.使用AF_XDP绑定开启wifi功能的网卡,获取这个网卡收到的全部数据包" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="MK47nBRpxyOCvtwYz0mT-1" vertex="1">
-          <mxGeometry y="90" width="200" height="30" as="geometry" />
+          <mxGeometry y="100" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="MK47nBRpxyOCvtwYz0mT-4" value="4.将这些数据包通过之前发起的TCP连接,全部传输到中间服务器" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="MK47nBRpxyOCvtwYz0mT-1" vertex="1">
-          <mxGeometry y="120" width="200" height="40" as="geometry" />
+          <mxGeometry y="150" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="vj2Zs9e24-JzKse8db9l-2" value="5.把这个TCP连接返回的所有内容,通过AF_XDP发送出去(发送回到用户主机)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="MK47nBRpxyOCvtwYz0mT-1" vertex="1">
-          <mxGeometry y="160" width="200" height="50" as="geometry" />
+          <mxGeometry y="200" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="9BPUU-cUFfq8zwGGeXJm-1" value="代码流程" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="440" y="560" width="200" height="190" as="geometry" />
@@ -315,16 +315,16 @@
           <mxGeometry y="80" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="9BPUU-cUFfq8zwGGeXJm-5" value="代码流程" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="680" y="560" width="200" height="180" as="geometry" />
+          <mxGeometry x="680" y="560" width="200" height="190" as="geometry" />
         </mxCell>
         <mxCell id="9BPUU-cUFfq8zwGGeXJm-6" value="1.对中间服务器发起TCP连接" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="9BPUU-cUFfq8zwGGeXJm-5" vertex="1">
-          <mxGeometry y="30" width="200" height="30" as="geometry" />
+          <mxGeometry y="30" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="9BPUU-cUFfq8zwGGeXJm-7" value="2.打开网卡混杂模式,将TCP获取的内容(原始数据包)通过AF_XDP,直接发送出去" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="9BPUU-cUFfq8zwGGeXJm-5" vertex="1">
-          <mxGeometry y="60" width="200" height="50" as="geometry" />
+          <mxGeometry y="70" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="9BPUU-cUFfq8zwGGeXJm-8" value="3.AF_XDP监听之前发出去的原始数据包的IP,如果是这个IP就将这整个数据包通过TCP连接发送回到中间服务器" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="9BPUU-cUFfq8zwGGeXJm-5" vertex="1">
-          <mxGeometry y="110" width="200" height="70" as="geometry" />
+          <mxGeometry y="120" width="200" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
